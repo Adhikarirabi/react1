@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  overflow-x: hidden;
+}
+
+h1 {
+  margin: 1px 0;
+}
+
+nav {
+  border-bottom: 5px solid orange;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+a {
+  color: rgb(207, 207, 207);
+  text-decoration: none;
+}
+
+a.active {
+  color: orange;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+.newsContainer {
+  display: grid;
+  margin: 1cm 0;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+}
+
+article {
+  font-size: 16px;
+  max-width: 400px;
+}
+
+.newsImage {
+  width: 400px;
+  margin: 10px 0;
+}
+
+.newsHeader {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.newsHeader::after {
+  content: "";
+  display: block;
+  border: 3px orange solid;
+  border-style: dotted;
+  width: 2cm;
+}
+
+.categories {
+  height: 1cm;
+  overflow: hidden;
+}
+
+.categories > span {
+  font-size: 10px;
+  padding: 3px;
+  margin: 0 3px;
+  color: black;
+  border-radius: 4px;
+  background-color: rgb(177, 177, 170);
+}
+
+.despcription {
+  text-indent: 1cm;
+  margin: 10px 0;
+}
+
+.AppBody {
+  margin: 10px 1cm;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    margin-top: 50px;
+  }
+}
+
+.App {
+  background-color: #282c34;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.error {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+footer {
+  margin: 0;
+  padding: 1cm 0;
+  text-align: center;
+  background-color: #282c34;
+}
+
+small {
+  background-color: #282c34;
+  text-align: center;
+}
+
+@media only screen and (max-width: 800px) {
+  .newsContainer {
+    display: grid;
+    margin: 1cm 0;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 15px;
+  }
+
+  nav {
+    font-size: 15px;
+  }
+  .newsContainer {
+    display: grid;
+    margin: 1cm 0;
+    grid-template-columns: auto;
+    grid-gap: 20px;
+  }
+}

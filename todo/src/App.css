@@ -1,0 +1,137 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+
+
+
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Todo {
+  display: grid;
+  width: 400px;
+  margin: 3px 0;
+  background-color: rgb(65, 64, 63);
+  padding: 7px;
+  font-size: 15px;
+  text-align: initial;
+  border-radius: 5px;
+  grid-template-columns: 60% 10% 20%;
+  align-content: center;
+  column-gap: 5px;
+}
+
+.remove,
+.complete {
+  color: whitesmoke;
+  border: 1px solid rgb(100, 100, 100);
+}
+
+.remove {
+  background-color: rgb(197, 24, 24);
+  border: 0;
+  cursor: pointer;
+}
+
+#remove_all {
+  background-color: rgb(197, 24, 24);
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+}
+
+.complete {
+  background-color: rgb(21, 70, 70);
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.inputControl {
+  padding: 0.3cm 0;
+  margin-bottom: 0.3cm;
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid rgb(129 255 21);
+  background-color: burlywood;
+}
+
+.inputControl::after {
+  content: "";
+  display: block;
+  border: 2px solid rgb(38, 0, 255);
+}
+
+.inputControl input,
+.inputControl button {
+  height: 1cm;
+  outline: none;
+  border: 0;
+  transition: 600ms ease-in-out;
+  background-color: #fff;
+}
+
+.inputControl button {
+  padding: 10px;
+}
+
+.inputControl button:hover {
+  background-color: rgb(32, 28, 3);
+  color: white;
+  cursor: pointer;
+  transition: 600ms ease-in-out;
+}
+
+.inputControl input {
+  width: 9cm;
+  outline: none;
+  text-indent: 10px;
+}
+
+.todoContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item {
+  text-decoration: none;
+  transition: 600ms ease-in-out;
+}
+
+.item.completed {
+  text-decoration: line-through;
+  transition: 600ms ease-in-out;
+}
